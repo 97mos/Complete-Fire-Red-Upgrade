@@ -1149,14 +1149,14 @@ map \map
 .endm
 
 @ Gives the player one of the specified (species) Pokemon at level level holding item.
-.macro givepokemon species:req level:req item:req unknown1=0 unknown2=0 unknown3=0
+.macro givepokemon species:req level:req item:req unknown1=0 customgivemon=0 ball=0
 .byte 0x79
 .hword \species
 .byte \level
 .hword \item
 .word \unknown1
-.word \unknown2
-.byte \unknown3
+.word \customgivemon
+.byte \ball
 .endm
 
 @ Gives the player an Egg of the given species

@@ -496,7 +496,7 @@ u8 LoadPaletteForEmotionBubbles(void)
 	#endif
 }
 
-u8 sub_805F510(const struct SpritePalette *spritePalette)
+u8 TryLoadObjectPalette(const struct SpritePalette *spritePalette)
 {
 	if (IndexOfSpritePaletteTag(spritePalette->tag) != 0xFF)
 		return 0xFF;

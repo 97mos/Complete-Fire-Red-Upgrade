@@ -250,17 +250,24 @@ static const u16* sPlayerMarlonOutfitColours[] =
 
 #ifdef EXISTING_OW_TABLE_ADDRESS
 	#define gOverworldTableSwitcher ((struct EventObjectGraphicsInfo***) EXISTING_OW_TABLE_ADDRESS)
-#elif defined UNBOUND //For Pokemon Unbound
+//#elif defined UNBOUND //For Pokemon Unbound
+//	const struct EventObjectGraphicsInfo** const gOverworldTableSwitcher[] =
+//	{
+//      (NPCPtr*) 0x88110E0,
+//		(NPCPtr*) 0x88B2720,
+//		(NPCPtr*) 0x88B2B20,
+//	};
+
 	const struct EventObjectGraphicsInfo** const gOverworldTableSwitcher[] =
 	{
-		(NPCPtr*) 0x88110E0,
+        (NPCPtr*) 0x88110E0,
 		(NPCPtr*) 0x88B2720,
 		(NPCPtr*) 0x88B2B20,
 	};
 
 #else //Modify this
 	// create 255 OW tables
-	const struct EventObjectGraphicsInfo** const gOverworldTableSwitcher[255] =
+	const struct EventObjectGraphicsInfo** const gOverworldTableSwitcher[] =
 	{
 		(NPCPtr*) 0x839FDB0,
 		(NPCPtr*) 0x0,

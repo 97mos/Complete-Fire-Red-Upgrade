@@ -596,9 +596,9 @@ GetAndCopyBoxMonDataAtHook:
 
 .pool
 @0x808BDF0 with r0
-sub_808BDE8Hook:
+SeekToNextMonInBoxHook:
 	mov r0, r8
-	bl sub_808BDE8
+	bl SeekToNextMonInBox
 	pop {r3}
 	mov r8, r3
 	pop {r4-r7,pc}

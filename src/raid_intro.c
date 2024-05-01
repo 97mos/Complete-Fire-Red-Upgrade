@@ -513,7 +513,7 @@ static void Task_RaidBattleIntroFadeIn(u8 taskId)
 
 	if (!gPaletteFade->active)
 	{
-		PlaySE(SE_RG_CARD3);
+		PlaySE(SE_CARD_OPEN);
 		gTasks[taskId].func = Task_RaidBattleIntroWaitForKeyPress;
 	}
 }

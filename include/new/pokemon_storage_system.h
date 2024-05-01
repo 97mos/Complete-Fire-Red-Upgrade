@@ -76,5 +76,5 @@ void RestorePartyFromTempTeam(u8 firstId, u8 numPokes);
 u8* GetBoxNamePtr(u8 boxId);
 u8 GetBoxWallpaper(u8 boxId);
 void SetBoxWallpaper(u8 boxId, u8 wallpaperId);
-s8 sub_80916F4(u8 boxId);
+s8 DetermineBoxScrollDirection(u8 boxId);
 u8 SendMonToPC(struct Pokemon* mon);

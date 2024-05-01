@@ -354,7 +354,7 @@ void SetBoxWallpaper(u8 boxId, u8 wallpaperId)
 		*(sPokemonBoxWallpaperPtrs[boxId]) = wallpaperId;
 }
 
-s8 sub_80916F4(u8 boxId)
+s8 DetermineBoxScrollDirection(u8 boxId)
 {
 	u8 i;
 	u8 currentBox = StorageGetCurrentBox();
@@ -369,7 +369,7 @@ s8 sub_80916F4(u8 boxId)
 	return (i < TOTAL_BOXES_COUNT / 2) ? 1 : -1;
 }
 
-s16 sub_808BDE8(struct CompressedPokemon *boxMons, u8 currIndex, u8 maxIndex, u8 arg3)
+s16 SeekToNextMonInBox(struct CompressedPokemon *boxMons, u8 currIndex, u8 maxIndex, u8 arg3)
 {
 	s16 i;
 	s16 adder = -1;

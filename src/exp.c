@@ -52,7 +52,7 @@ static bool8 IsAffectedByHardLevelCap(struct Pokemon* mon);
 static void EmitExpBarUpdate(u8 a, u8 b, u32 c);
 static void EmitExpTransferBack(u8 bufferId, u8 b, u8 *c);
 static void Task_GiveExpToMon(u8 taskId);
-static void sub_80300F4(u8 taskId);
+static void Task_GiveExpWithExpBar(u8 taskId);
 static u32 GetExpToLevel(u8 toLevel, u8 growthRate);
 static void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies);
 
@@ -706,11 +706,11 @@ static void Task_GiveExpToMon(u8 taskId)
 
 		PlaySE(SE_EXP);
 		SetBattleBarStruct(bank, gHealthboxSpriteIds[bank], totalExpToNextLvl, currExp - currLvlExp, -gainedExp); //sub_8043D84 in Ruby
-		gTasks[taskId].func = sub_80300F4;
+		gTasks[taskId].func = Task_GiveExpWithExpBar;
 	}
 }
 
-static void sub_80300F4(u8 taskId)
+static void Task_GiveExpWithExpBar(u8 taskId)
 {
 	if (gTasks[taskId].data[10] < 13)
 	{

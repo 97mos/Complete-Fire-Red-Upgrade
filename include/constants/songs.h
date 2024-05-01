@@ -132,10 +132,10 @@
 #define SE_EARTHQUAKE 0xE3
 #define SE_M_STAT_INCREASE 0xE8
 
-#define SE_RG_W_DOOR 241        // Door
-#define SE_RG_CARD1 242         // Trainer Card 1
-#define SE_RG_CARD2 243         // Trainer Card 2
-#define SE_RG_CARD3 244         // Trainer Card 3
+#define SE_RG_W_DOOR 241      // Door
+#define SE_CARD_FLIP 242     // SE_RG_CARD1
+#define SE_CARD_FLIPPING 243 // SE_RG_CARD2
+#define SE_CARD_OPEN  244    // SE_RG_CARD3
 #define SE_RG_BAG1 245          // Bag Scroll
 #define SE_RG_BAG2 246          // Bag Pocket Change
 #define SE_RG_GETTING 247

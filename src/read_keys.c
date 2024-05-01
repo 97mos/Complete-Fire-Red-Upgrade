@@ -395,7 +395,7 @@ u8 GetLRKeysPressedAndHeld(void)
 	return 0;
 }
 
-s32 sub_8104284(void)
+s32 DexScreen_InputHandler_GetShoulderInput(void)
 {
 	if (gSaveBlock2->optionsButtonMode != OPTIONS_BUTTON_MODE_L_EQUALS_A)
 	{

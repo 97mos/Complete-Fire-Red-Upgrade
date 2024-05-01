@@ -373,7 +373,7 @@ DiveCheckEmergeHook 806CB30 0
 DiveCheckDownHook 806CCCC 0
 GetLRKeysState 80BF630 0
 GetLRKeysPressedAndHeld 80BF66C 0
-sub_8104284 8104284 0
+DexScreen_InputHandler_GetShoulderInput 8104284 0
 
 ##Character Customization
 GetEventObjectGraphicsInfo 805F2C8 1
@@ -395,7 +395,7 @@ PlayerFishingFix 805D3AC 1
 GetEventObjectGraphicsInfoByEventObj 801D760 1
 CreateTrainerPicSpriteHook 810C2AC 4
 CreditsPlayerPaletteHook 80F4A3C 3
-sub_805F510 805F510 1
+TryLoadObjectPalette 805F510 1
 RegionMapPlayerIconHook 80C42F4 0
 
 #Pre-Battle Mughots
@@ -611,11 +611,11 @@ ZeroBoxMonAt 808BCB4 2
 BoxMonAtToMon 808BCF0 3
 GetBoxedMonPtr 808BD30 2
 GetBoxNamePtr 808BD6C 1
-sub_808BDE8Hook 808BDF0 0
+SeekToNextMonInBoxHook 808BDF0 0
 GetBoxWallpaper 808BD94 1
 SetBoxWallpaper 808BDBC 2
 PlaceBoxMonIcon 8090D58 2
-sub_80916F4 80916F4 1
+DetermineBoxScrollDirection 80916F4 1
 ExpandedItemNameFixPokemonStorageSystemHook 8093F58 3
 CompressedStorageSummaryScreenUpdate1 8093768 1
 CompressedStorageSummaryScreenUpdate2 8138BD2 1

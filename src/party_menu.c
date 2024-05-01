@@ -114,7 +114,7 @@ void __attribute__((long_call)) PartyMenuTryEvolution(u8 taskId);
 void __attribute__((long_call)) FreePartyPointers(void);
 void __attribute__((long_call)) PartyMenuDisplayYesNoMenu(void);
 void __attribute__((long_call)) ItemUseCB_RareCandyStep(u8 taskId, UNUSED TaskFunc func);
-void __attribute__((long_call)) sub_8124DC0(u8 taskId);
+void __attribute__((long_call)) Task_DoUseItemAnim(u8 taskId);
 
 //This file's functions:
 static void OpenSummary(u8 taskId);

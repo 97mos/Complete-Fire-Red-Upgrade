@@ -5925,7 +5925,7 @@ void AnimTask_ReloadAttackerSprite(u8 taskId)
 		case 1:
 			//Actually update the sprite now
 			gSprites[spriteId].invisible = FALSE;
-			newTask = &gTasks[CreateTask(sub_807331C, 5)];
+			newTask = &gTasks[CreateTask(Task_ClearMonBg, 5)];
 			newTask->data[0] = 0;
 			newTask->data[2] = gBattleAnimAttacker;
 			++task->data[10];
@@ -5933,7 +5933,7 @@ void AnimTask_ReloadAttackerSprite(u8 taskId)
 
 		case 2:
 			//Make sure the task is done. I'm not sure if this is necessary
-			if (!FuncIsActiveTask(sub_807331C))
+			if (!FuncIsActiveTask(Task_ClearMonBg))
 				++task->data[10];
 			break;
 

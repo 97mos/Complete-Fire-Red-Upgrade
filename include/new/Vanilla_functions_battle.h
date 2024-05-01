@@ -101,7 +101,7 @@ void __attribute__((long_call)) DestroyAnimSprite(struct Sprite *sprite);
 void __attribute__((long_call)) DestroyAnimVisualTask(u8 taskId);
 void __attribute__((long_call)) AddSpriteIndex(u16 index);
 void __attribute__((long_call)) WaitAnimFrameCount(void);
-void __attribute__((long_call)) sub_807331C(u8 taskId);
+void __attribute__((long_call)) Task_ClearMonBg(u8 taskId);
 void __attribute__((long_call)) CreateBattleStartTask(u8 transition, u16 song);
 void __attribute__((long_call)) StoreSpriteCallbackInData6(struct Sprite *sprite, void (*callback)(struct Sprite*));
 u8 __attribute__((long_call)) GetBattlerSide(u8 bank);

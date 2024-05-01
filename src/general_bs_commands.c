@@ -5359,14 +5359,14 @@ static item_t ChoosePickupItem(u8 level)
 	const item_t* const common_row = sPickupCommonItems + row_num;
 	const item_t* const rare_row = sPickupRareItems + row_num;
 
-	u16 k = Random();
-
+	u16 rand = Random();
+    
 	for (u32 i = 0; i < PU_COMMON_PER_ROW; ++i)
-		if (k < pickup_common_item_ceilings[i])
+		if (rand < pickup_common_item_ceilings[i])
 			return common_row[i];
 
 	for (u32 i = 0; i < PU_RARE_PER_ROW; ++i)
-		if (k < pickup_rare_item_ceilings[i])
+		if (rand < pickup_rare_item_ceilings[i])
 			return rare_row[i];
 
 	// will never be reached
