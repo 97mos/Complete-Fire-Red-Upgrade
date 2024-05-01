@@ -160,8 +160,8 @@ enum OverworldNPCSprites
 #define EVENT_OBJ_GFX_DEOXYS_N 150
 #define EVENT_OBJ_GFX_SS_ANNE 151
 
-//#define EVENT_OBJ_GFX_RED_UNDERWATER 256
-//#define EVENT_OBJ_GFX_LEAF_UNDERWATER 257
+#define EVENT_OBJ_GFX_RED_UNDERWATER 256
+#define EVENT_OBJ_GFX_LEAF_UNDERWATER 257
 
 //#define EVENT_OBJ_GFX_RED_UNDERWATER 6 //By default VS. Seeker on bike b\c not used by anything else
 //#define EVENT_OBJ_GFX_LEAF_UNDERWATER 13
