@@ -9,6 +9,7 @@
 #include "../include/new/ability_util.h"
 #include "../include/new/battle_util.h"
 #include "../include/new/move_tables.h"
+#include "../include/new/replace_ability_tables.h"
 #include "../include/new/util.h"
 
 extern const u8 gAbilityNames[][ABILITY_NAME_LENGTH + 1];
@@ -460,58 +461,32 @@ bool8 IsTargetAbilityIgnoredNoMove(u8 defAbility, u8 atkAbility)
 
 bool8 SpeciesHasTurboblaze(unusedArg u16 species)
 {
-	#if (defined SPECIES_RESHIRAM && defined SPECIES_KYUREM_WHITE)
-	return species == SPECIES_RESHIRAM
-		|| species == SPECIES_KYUREM_WHITE;
-	#else
-	return FALSE;
-	#endif
+    return gSpecialReplaceAbilityFlags[species].gSpeciesHasTurboblaze;
 }
 
 bool8 SpeciesHasTeravolt(unusedArg u16 species)
 {
-	#if (defined SPECIES_ZEKROM && defined SPECIES_KYUREM_BLACK)
-	return species == SPECIES_ZEKROM
-		|| species == SPECIES_KYUREM_BLACK;
-	#else
-	return FALSE;
-	#endif
+    return gSpecialReplaceAbilityFlags[species].gSpeciesHasTeravolt;
 }
 
 bool8 SpeciesHasDrillBeak(unusedArg u16 species) //Custom Unbound Ability
 {
-	#if (defined SPECIES_SPEAROW && defined SPECIES_FEAROW)
-	return species == SPECIES_SPEAROW || species == SPECIES_FEAROW;
-	#else
-	return FALSE;
-	#endif
+    return gSpecialReplaceAbilityFlags[species].gSpeciesHasDrillBeak;
 }
 
 bool8 SpeciesHasGrassDash(unusedArg u16 species) //Custom Unbound Ability
 {
-	#ifdef SPECIES_SUNFLORA
-	return species == SPECIES_SUNFLORA;
-	#else
-	return FALSE;
-	#endif
+    return gSpecialReplaceAbilityFlags[species].gSpeciesHasGrassDash;
 }
 
 bool8 SpeciesHasEvaporate(unusedArg u16 species) //Custom Unbound Ability
 {
-	#ifdef SPECIES_MAGCARGO
-	return species == SPECIES_MAGCARGO;
-	#else
-	return FALSE;
-	#endif
+    return gSpecialReplaceAbilityFlags[species].gSpeciesHasEvaporate;
 }
 
 bool8 SpeciesHasSlipperyTail(unusedArg u16 species) //Custom Unbound Ability
 {
-	#ifdef SPECIES_SEVIPER
-	return species == SPECIES_SEVIPER;
-	#else
-	return FALSE;
-	#endif
+    return gSpecialReplaceAbilityFlags[species].gSpeciesHasSlipperyTail;
 }
 
 bool8 IsClearBodyAbility(u8 ability)
